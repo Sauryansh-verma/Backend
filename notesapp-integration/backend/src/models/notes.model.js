@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const notesSchema = new mongoose.Schema({
-    title: {
+    title:{
         type: String,
-        required: true
+        required: true,
     },
     description: {
         type: String,
         required: true,
-        minLength: 20
+        minLength: [20, 'minimum 20 characters are required']
     }
 });
 
